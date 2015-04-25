@@ -1,0 +1,41 @@
+{
+  "name": "Genesis",
+  "version": "0.0.0",
+  "description": "Frontend JS framework",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jonathanrandet/Genesis.git"
+  },
+  "keywords": [
+    "Genesis",
+    "javascript",
+    "frontend",
+    "framework"
+  ],
+  "author": "Jonathan RANDET",
+  "bugs": {
+    "url": "https://github.com/jonathanrandet/Genesis/issues"
+  },
+  "homepage": "https://github.com/jonathanrandet/Genesis",
+  "devDependencies": {
+    "load-grunt-tasks": "~3.1.0",
+    "grunt": "~0.4.5",
+    "grunt-contrib-jshint": "~0.11.0",
+    "grunt-contrib-uglify": "~0.5.1",
+    "grunt-contrib-cssmin": "~0.10.0",
+    "grunt-browserify": "~3.5.0",
+    "browserify": "~9.0.3",
+    "browserify-shim": "~3.8.3",
+    "moment": "~2.9.0",
+    "backbone": "~1.1.2",
+    "handlebars": "~3.0.0",
+    "hbsfy": "~2.2.1",
+    "mocha": "~2.2.0",
+    "grunt-jsduck": "~1.0.1"
+  },
+  "browser": {
+    "jquery": "./vendor/js/jquery.js",
+    "validate": "./vendor/js/validate.js"
+  },
+  "browserify-shim": "./vendor/js/shims.js"
+}
