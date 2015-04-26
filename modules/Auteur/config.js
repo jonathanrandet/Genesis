@@ -23,7 +23,7 @@ var config = {
 				 * @Accepted values {text, number, checkbox, radio, date, select, textarea}
 				 * @Default value {text}
 				 */
-				type: 'text',
+				type: '',
 
 				/**
 				 * This attribut indicates whether the field is required.
@@ -70,10 +70,6 @@ var config = {
 				 * @type {Object}
 				 */
 				attributes: {
-					id: 'jonathan-id',
-					title: 'Mon Titre',
-					name: 'Génésis',
-					placeholder: 'Saisir votre texte',
 				},
 
 				/**
