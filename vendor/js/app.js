@@ -7,6 +7,10 @@ var Vue = require('./vue');
 
 var app = new Vue({});
 
+
+var tata = require('../../lib/models/ModuleModel');
+
+var toto = new tata();
 console.log($);
 console.log(jQuery('body').validate());
 console.log(moment().format('DD/MM/YYYY'));
