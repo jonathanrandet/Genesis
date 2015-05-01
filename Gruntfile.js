@@ -9,7 +9,7 @@ module.exports = function(grunt){
 		browserify: {
 	      	lib: {
 		        files: {
-		          './prod/app.js': ['./vendor/js/validate.js', './vendor/js/app.js','./vendor/js/jquery-ui.js']
+		          './prod/app.js': ['./vendor/js/validate.js','./vendor/js/*.js']
 		        },
 		        options: {
 		          transform: ['hbsfy', 'browserify-shim']
@@ -36,6 +36,6 @@ module.exports = function(grunt){
 
 	// Load all plugins 
 	require('load-grunt-tasks')(grunt);
-	grunt.registerTask('default',['jshint', 'browserify:lib']);
+	grunt.registerTask('default',['jshint', 'browserify:lib','cssmin']);
 	grunt.registerTask('prod',['jshint', 'browserify:lib', 'uglify', 'cssmin']);
 };

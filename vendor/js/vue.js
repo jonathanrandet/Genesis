@@ -29,4 +29,18 @@ function toTemplateBindings(){
 function forTest(){
 	console.log('tata');
 	console.log(Backbone.$('#test').validate());
+
+	$('#test').click(function(){
+		//$(this).draggable();	
+		//$(this).tooltip('toggle');
+	});
+
+	$(function(){
+		//$('#test').draggable();	
+		$('#test').tooltip({
+			placement: 'bottom',
+			content: 'Tarantino'
+		});
+	});
+	
 }
