@@ -11,6 +11,8 @@ module.exports = Backbone.View.extend({
 });
 
 function initialize(data){
+	var tata = require('../../modules/manifest');
+	console.log(tata);
 	this.template = require('./template.hbs');
 	this.render();
 }
