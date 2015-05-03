@@ -7,5 +7,6 @@ $(function(){
 	test = new ModuleModel(data);
 
 	console.log(test.name);
+	alert('Bienvenu Jonathan');
 
 });
