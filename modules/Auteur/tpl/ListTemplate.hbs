@@ -13,7 +13,11 @@
 		{{#each tbody}}
 			<tr>
 				{{#each this}} {{#if display}}<td>{{value}}</td>{{/if}} {{/each}}
-				
+
+				{{!--{{#if DisplayName_001.display}}<td>{{DisplayName_001.value}}</td>{{/if}} // Avec DisplayName_001 = displayName du champs
+				{{#if DisplayName_002.display}}<td>{{DisplayName_002.value}}</td>{{/if}} 
+				{{#if DisplayName_003.display}}<td>{{DisplayName_003.value}}</td>{{/if}} --}}
+
 				{{#if id}} {{!-- Les boutons d'édition et de suppression --}}
 				<td>
 				<a data-click="editModel" data-id="{{id}}" data-toggle="modal" data-target="#AuteurEdit" href="#" style="margin-right:10px;"><span class="glyphicon glyphicon-pencil"></span> edit</a>

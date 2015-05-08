@@ -6,7 +6,7 @@ $(function(){
 	var data = require('../../modules/Auteur/config');
 	moduleAuteur = new ModuleModel(data);
 
-	console.log(moduleAuteur.FieldList[0].type); //  Voir si FieldList ne doit pas etre un toJSON
+	console.log(moduleAuteur.FieldList[0].type); 
 
 	var AddView = require('../../lib/views/AddView');
 	var maVue = new AddView({
@@ -16,6 +16,14 @@ $(function(){
 	});
 	maVue.render();
 	console.info(moduleAuteur.DataCollection);
+
+	var ListView = require('../../lib/views/ListView');
+	var maNewVue = new ListView({
+		el: '#addview',
+		model: moduleAuteur,
+		template: require('../../modules/Auteur/tpl/ListTemplate.hbs')
+	});
+	maNewVue.render();
 
 	alert('Bienvenu Jonathan');
 
