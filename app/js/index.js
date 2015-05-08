@@ -4,9 +4,19 @@ $(function(){
 
 	var ModuleModel = require('../../lib/models/ModuleModel');
 	var data = require('../../modules/Auteur/config');
-	test = new ModuleModel(data);
+	moduleAuteur = new ModuleModel(data);
 
-	console.log(test.FieldList.at(0).get('type'));
+	console.log(moduleAuteur.FieldList[0].type); //  Voir si FieldList ne doit pas etre un toJSON
+
+	var AddView = require('../../lib/views/AddView');
+	var maVue = new AddView({
+		el: '#addview',
+		model: moduleAuteur,
+		template: require('../../modules/Auteur/tpl/AddTemplate.hbs')
+	});
+	maVue.render();
+	console.info(moduleAuteur.DataCollection);
+
 	alert('Bienvenu Jonathan');
 
 });

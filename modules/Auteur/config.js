@@ -1,120 +1,106 @@
-/**
- * Object that contain all descriptions of module. It should have a unique className in project, 
- * fields descriptions, rules of validations...
- * @type {Object}
- */
+
 var config = {
-		/**
-		 * This is the module name. It is recommended that this name be the same that the module directory name. 
-		 * It must be unique.
- 		 * @type {String}
-		 */
 		className: 'Auteur',
-
-		/**
-		 * This is the field list of module.
-		 * @type {Array}
-		 */
-		fields: [ 
+		fields: [ // Bouton de validation ajouté automatiquement et grisé tant que les champs requis sont pas remplis. 
 			{
-				/**
-				 * The html type of the field.
-				 * @type {String}
-				 * @Accepted values {text, number, checkbox, radio, date, select, textarea}
-				 * @Default value {text}
-				 */
-				type: 'text',
-
-				/**
-				 * This attribut indicates whether the field is required.
-				 * @type {Boolean}
-				 * @Default value {false}
-				 */
-				required: true,
-
-				/**
-				 * This attribut indicates whether the field should be visible in the creation and update forms.
-				 * @type {Boolean}
-				 * @Default value {true}
-				 */
-				formDisplay: true,
-
-				/**
-				 * This attribut indicates whether the field should be visible in the data list.
-				 * @type {Boolean}
-				 * @Default value {true}
-				 */
-				listDisplay: true,
-
-				/**
-				 * List of CSS classes to add to the field.
-				 * @type {Array}
-				 */
-				classes: ['class1', 'class2'],
-
-				/**
-				 * The column name that will be displayed for this field in the data list.
-				 * @type {String}
-				 * @Default value {html name}
-				 */
-				displayName : 'DisplayName_001',
-
-				/**
-				 * The HTML name of the field. This attribute is required and should be unique by module. 
-				 * @type {String}
-				 */
+				type: 'text', // Number, checkbox, radio, date, list,
+				required: true, // default false
+				formDisplay: true, // Pour les formulaires d'édition et de création (default true)
+				listDisplay: true, // Permet d'afficher ou pas le champs en liste  (default true)
+				classes: ['class1', 'class2'], // Les class css dans un tableau
+				displayName : 'DisplayName_001', // Utilisé comme étiquette pour le détail et l'affichage en liste.
+				label: 'Nom', // Le label du champs 
 				name:'nom',
-
-				/**
-				 * List of HTML attributes for the field.
-				 * @type {Object}
-				 */
 				attributes: {
-					id: 'jonathan-id',
+					id: 'jonathan-id', // L'id a utiliser pour css ou jquery ...
 					title: 'Mon Titre',
-					name: 'Génésis',
+					name: 'Génésis', // doit etre obligatoire car utilisé pour la DataView (le title des champs de la table)
 					placeholder: 'Saisir votre texte',
-				},
-
-				/**
-				 * List of data attributes for the field.
-				 * @type {Object}
-				 */
+				}, // title, name, placeholder
 				dataAttributes: {
-					content:'Mon content' //for data-content
-				} 
+					content:'Mon content'
+				} //Pour data-content
+			},{
+				displayName : 'DisplayName_002', 
+				name:'prenom',
+				label: 'Prenom', // Le label du champs 
+				listDisplay: true,
+				attributes: {
+					title: 'Mon Titre',
+					name: 'Field_001', // doit etre obligatoire car utilisé pour la DataView (le title des champs de la table)
+					placeholder: 'Saisir votre texte'
+				}
+			},{
+				displayName : 'DisplayName_003',
+				name:'age',
+				display: true,
+				label: 'Age', // Le label du champs 
+				attributes: {
+					title: 'Mon Titre',
+					name: 'Field_002', // doit etre obligatoire car utilisé pour la DataView (le title des champs de la table)
+					placeholder: 'Saisir votre texte'
+				}
 			}
 		],
-
-		/**
-		 * The text of the creation form's submit button.
-		 * @type {String}
-		 * Default value {Add}
-		 */
-		addSubmitText: 'Ajouter', // Bouton de validation ajouté automatiquement et grisé tant que les champs requis sont pas remplis.
-
-		/**
-		 * The text of the update form's submit button.
-		 * @type {String}
-		 * Default value {Update}
-		 */
+		addSubmitText: 'Ajouter',
 		editSubmitText: 'Modifier',
 
-
-		/**
-		 * List of search options.
-		 * @type {Array}
-		 */
 		search: [
+			{ // si search vaut true, 
+				type: 'text', // Le type du champs de recherche. (La valeur par défaut est text). peut etre checkbox, date ...
+				trigger : 'auto', // Le name de l'élément du Dom qui déclenche la recherche ( a préciser si ce n'est pas le champs de saisis lui même)
+				event: 'keyup', // L'évènement à effectuer sur "trigger" pour déclancher (default click)
+				comparator: '>', // " = ", " > ", " < ", " != "
+				value: '25',
+				searchField: 'DisplayName_002', // Le name du champs sur lequel la recherche sera faite. Si ce champs n'est pas renseigné, la recherche se fait partt.
+				placeholder: ' Rechercher',
+				label: '',
+				indicator: '' // une indication sur la recherche si indispensable
+			}
 		],
-
-		/**
-		 * Rules of validation forms. Genesis use jquery.validate. http://jqueryvalidation.org/validate
-		 * @type {Object}
-		 */
 		validate: {
-		}
+			rules:{
+				nom: "required",
+				prenom: {
+					required: true,
+					maxlength: 20
+				},
+				age: {
+					required: true,
+					min:{
+						param: 10
+					},
+					max:{
+						param: 100
+					}
+				}
+			},
+			messages:{
+				nom: {
+					required: " Le champs nom est requis "
+				},
+				prenom: {
+					required: " Le champs prenom est requis ",
+					maxlength: " Le prénom ne peux excéder 20 lettres"
+				},
+				age:{
+					required: " Le champs age est requis ",
+					max: " L'age ne peux dépasser 100 ",
+					min: " L'age ne peux pas être inférieur à 10"
+				}
+			}
+		},
+		rules: [
+			// Sous la forme "firstSelector" "comparator" "secondSelector"
+			{
+				fieldtype: 'text', 
+				firstSelector: '', // Le selecteur du premier element de la comparaison.
+				secondSelector: '', // Le selecteur du second element de la comparaison.
+				comparator:'isLessThan ou <', // isMoreThan ou >, isEqualTo ou =, isDifferentFrom !=,
+				textError:'Error', // Message à Afficher si il y a erreur 
+				validation: function(){} // A renseigner si on veut faire des traitements plus complexes. ( On y utilise les selecteurs pour referencer les champs)
+			},{},{}
+		]
 };
-
 
 module.exports = config;
