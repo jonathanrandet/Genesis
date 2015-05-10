@@ -10,7 +10,6 @@ $(function(){
 
 	var AddView = require('../../lib/views/AddView');
 	var maVue = new AddView({
-		el: '#addview',
 		model: moduleAuteur,
 		template: require('../../modules/Auteur/tpl/AddTemplate.hbs')
 	});
@@ -19,7 +18,6 @@ $(function(){
 
 	var ListView = require('../../lib/views/ListView');
 	var maNewVue = new ListView({
-		el: '#addview',
 		model: moduleAuteur,
 		template: require('../../modules/Auteur/tpl/ListTemplate.hbs')
 	});
