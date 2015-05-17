@@ -20,6 +20,12 @@ $(function(){
 	});
 	maNewVue.render();
 
+	var PageView = require('../../lib/views/PageView');
+	var datast = {};
+	datast.name = 'accueil';
+	var testamos = new PageView(datast);
+
 	alert('Bienvenu Jonathan');
+
 
 });
