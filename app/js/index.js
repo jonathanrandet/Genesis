@@ -25,6 +25,12 @@ $(function(){
 	datast.name = 'accueil';
 	var testamos = new PageView(datast);
 
+
+	var collection = require('../../lib/collections/ModuleCollection');
+	var testi = new collection(ModuleModel);
+	console.log(testi.toJSON());
+
+
 	alert('Bienvenu Jonathan');
 
 
