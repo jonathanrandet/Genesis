@@ -55,6 +55,17 @@ $(function(){
 
 	app.Pages.accueil = Page;
 
+
+	var test = new PageView({
+		name: 'tata',
+		ParentView: app
+	});
+
+	test.template = require('../tpl/test.hbs');
+	test.setPageModel('tata');
+
+	app.Pages.test = test;
+
 	app.start();
 	alert('Bienvenu Jonathan');
 
