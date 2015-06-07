@@ -43,7 +43,7 @@ $(function(){
 	});
 
 	app.PageModel.tata.setHeader(require('../tpl/Header.hbs'));
-	app.PageModel.tata.setNav(require('../tpl/Navigation.hbs'));
+	app.PageModel.tata.setNav(require('../tpl/Nav.hbs'));
 	app.PageModel.tata.setFooter(require('../tpl/Footer.hbs'));
 
 	var Page = new PageView({

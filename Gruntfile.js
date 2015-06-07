@@ -2,8 +2,11 @@ module.exports = function(grunt){
  
 	var fs 			= grunt.file;
 	var rootdir 	= './modules';
+	var rootdirPage = './app/tpl';
 	var manifest 	= './modules/manifest.js';
 	var content		= '';
+	var pages		= '';
+	var models 		= '';
 	var	allIsOk		= true;
 
 	function callback(abspath, rootdir, subdir, filename){
@@ -51,6 +54,43 @@ module.exports = function(grunt){
 		
 		return isOk;
 	}
+
+/*	function generateModelsConfig(subdir, rootdir, path){
+		var isOk = false;
+		
+		if(fs.isFile(rootdirPage+'/model.hbs') || fs.isFile(rootdirPage+'/Model.hbs')){
+			content += subdir+': {\n';
+			content	+= '\tconfig: require(\'./'+subdir+'/config\'),\n';
+			isOk = true;
+		}
+
+		if (isOk){
+			content += '\ttemplates: {\n';
+			if(fs.isFile(path+'/AddTemplate.hbs')){
+				content += '\t\taddview: require(\'./'+subdir+'/tpl/AddTemplate.hbs\'),\n';	
+			}
+			if(fs.isFile(path+'/EditTemplate.hbs')){
+				content += '\t\teditview: require(\'./'+subdir+'/tpl/EditTemplate.hbs\'),\n';	
+			}
+			if(fs.isFile(path+'/ListTemplate.hbs')){
+				content += '\t\tlistview: require(\'./'+subdir+'/tpl/ListTemplate.hbs\'),\n';	
+			}
+			if(fs.isFile(path+'/SearchTemplate.hbs')){
+				content += '\t\tsearchview: require(\'./'+subdir+'/tpl/SearchTemplate.hbs\')\n';	
+			}
+			content += '\t}\n},\n';
+			console.log('');
+			console.info('\'Config\' : Module \''+subdir+'\' configuration ... OK !');
+		}
+		else{
+			console.log('');
+			console.error('\'Config\' : Module \''+subdir+'\' configuration ... FAIL !!!');
+			console.error('\'Config\' : Module \''+subdir+'\' requires a config file : '+rootdir+'/'+subdir+'/config.js');
+			allIsOk = false;
+		}
+		
+		return isOk;
+	}*/
 
 	function createManifest(manifest, content){
 		var isOk = false;
