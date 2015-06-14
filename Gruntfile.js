@@ -182,8 +182,9 @@ module.exports = function(grunt){
 	fs.recurse(rootdirPage, callbackPage);
 	fs.recurse(rootdir, callback);
 	generateModelJSON();
-	console.log(models);
-	content = 'module.exports = {\n' + content.substring(0, content.length-2)+ '\n};';
+	content = 'module.exports = {\n modules: {\n\t' + content.substring(0, content.length-2)+'\n},\n';
+	content += 'models: {\n\t'+models.substring(0, models.length-2)+'\n}, \n';
+	content += 'pages: {\n\t'+pages.substring(0, pages.length-2)+'\n} \n};';
 	
 	// If all is well
 	if(allIsOk){
