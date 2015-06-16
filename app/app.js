@@ -1,5 +1,5 @@
 var app = {
 	// All parameters here ...
-	firstPage: 'test'
+	firstPage: 'accueil'
 };
 module.exports = app;

@@ -129,15 +129,21 @@ module.exports = function(grunt){
 
 	function generateModelJSON(){
 		_.each(structures, function(model, name){
-			var header = headers[name] || headers['default'];
-			var footer = footers[name] || footers['default'];
-			var nav    = navs[name] || navs['default'];
+			var header = headers[name];
+			var footer = footers[name];
+			var nav    = navs[name];
 			models+= name+': {\n';
-			models+= '\tname: \''+name+'\',\n';
+			if(!_.isUndefined(header)){
+				models+= '\theader: require(\'../app/tpl/'+header+'\'),\n';
+			}
+			if(!_.isUndefined(footer)){
+				models+= '\tfooter: require(\'../app/tpl/'+footer+'\'),\n';				
+			}
+			if(!_.isUndefined(nav)){
+				models+= '\tnav: require(\'../app/tpl/'+nav+'\'),\n';
+			}
 			models+= '\tstructure: require(\'../app/tpl/'+model+'\'),\n';
-			models+= '\theader: require(\'../app/tpl/'+header+'\'),\n';
-			models+= '\tfooter: require(\'../app/tpl/'+footer+'\'),\n';
-			models+= '\tnav: require(\'../app/tpl/'+nav+'\')\n';
+			models+= '\tname: \''+name+'\'\n';
 			models+= '}, \n';
 		
 		});

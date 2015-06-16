@@ -34,7 +34,7 @@ $(function(){
 
 
 	//console.log(app);
-	var PageModel = require('../../lib/views/ModelView');
+/*	var PageModel = require('../../lib/views/ModelView');
 	var PageView  = require('../../lib/views/PageView');
 	
 	app.PageModel.tata = new PageModel({
@@ -44,9 +44,9 @@ $(function(){
 
 	app.PageModel.tata.setHeader(require('../tpl/Header.hbs'));
 	app.PageModel.tata.setNav(require('../tpl/Nav.hbs'));
-	app.PageModel.tata.setFooter(require('../tpl/Footer.hbs'));
+	app.PageModel.tata.setFooter(require('../tpl/Footer.hbs'));*/
 
-	var Page = new PageView({
+/*	var Page = new PageView({
 		name: 'accueil',
 		ParentView: app
 	});
@@ -59,13 +59,16 @@ $(function(){
 	var test = new PageView({
 		name: 'tata',
 		ParentView: app
-	});
+	});*/
 
-	test.template = require('../tpl/test.hbs');
-	test.setPageModel('tata');
+/*	test.template = require('../tpl/test.hbs');
+	test.setPageModel('tata');*/
 
-	app.Pages.test = test;
-
+	//app.Pages.test = test;
+	//app.Pages.accueil.setModel('tata');
+	//app.Pages.test.removeModel();
+	//app.Pages.accueil.removeModel();
+	app.Pages.accueil.setTitle('Bienvenue');
 	app.start();
 	alert('Bienvenu Jonathan');
 
