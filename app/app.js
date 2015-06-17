@@ -1,5 +1,6 @@
 var app = {
 	// All parameters here ...
-	firstPage: 'accueil'
+	firstPage: 'accueil',
+	name: 'Genesis Project'
 };
 module.exports = app;
