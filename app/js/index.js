@@ -65,7 +65,7 @@ $(function(){
 	test.setPageModel('tata');*/
 
 	//app.Pages.test = test;
-	//app.Pages.accueil.setModel('tata');
+	app.Pages.accueil.setModel('sansnom');
 	//app.Pages.test.removeModel();
 	//app.Pages.accueil.removeModel();
 	app.Pages.accueil.setTitle('Bienvenue');
