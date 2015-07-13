@@ -33,6 +33,14 @@ $(function(){
 	var app = new Genesis();
 
 
+	app.initPage('test', actionTest);
+
+	function actionTest(app, page){
+		console.log(app.params);
+		console.log(page.name);
+		page.setModel('sansnom');
+	}
+
 	//console.log(app);
 /*	var PageModel = require('../../lib/views/ModelView');
 	var PageView  = require('../../lib/views/PageView');
@@ -65,12 +73,12 @@ $(function(){
 	test.setPageModel('tata');*/
 
 	//app.Pages.test = test;
-	app.Pages.accueil.setModel('sansnom');
+	app.getPage('accueil').setModel('sansnom');
 	//app.Pages.test.removeModel();
 	//app.Pages.accueil.removeModel();
-	app.Pages.accueil.setTitle('Bienvenue');
+	app.getPage('accueil').setTitle('Bienvenue');
 	app.start();
-	alert('Bienvenu Jonathan');
+	//alert('Bienvenu Jonathan');
 
 
 });
