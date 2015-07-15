@@ -1,6 +1,7 @@
 
 var config = {
 		className: 'Auteur',
+		urlRoot: '',
 		fields: [ // Bouton de validation ajouté automatiquement et grisé tant que les champs requis sont pas remplis. 
 			{
 				type: 'text', // Number, checkbox, radio, date, list,

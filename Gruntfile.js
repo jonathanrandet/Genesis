@@ -204,7 +204,7 @@ module.exports = function(grunt){
 			browserify: {
 		      	lib: {
 			        files: {
-			          './prod/app.js': ['./vendor/js/validate.js','./vendor/js/*.js', './app/**/*.js','./lib/js/*.js']
+			          './prod/app.js': ['./vendor/js/validate.js','./vendor/js/*.js', './lib/js/*.js','./app/**/*.js']
 			        },
 			        options: {
 			          transform: ['hbsfy', 'browserify-shim']

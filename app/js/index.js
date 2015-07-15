@@ -39,6 +39,7 @@ $(function(){
 		console.log(app.params);
 		console.log(page.name);
 		page.setModel('sansnom');
+		alert('Bienvenu sur mon site !');
 	}
 
 	//console.log(app);
@@ -78,7 +79,7 @@ $(function(){
 	//app.Pages.accueil.removeModel();
 	app.getPage('accueil').setTitle('Bienvenue');
 	app.start();
-	//alert('Bienvenu Jonathan');
+	alert('Bienvenu Jonathan');
 
 
 });
