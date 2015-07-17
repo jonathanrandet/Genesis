@@ -78,6 +78,7 @@ $(function(){
 	//app.Pages.test.removeModel();
 	//app.Pages.accueil.removeModel();
 	app.getPage('accueil').setTitle('Bienvenue');
+	app.getData(['ggffg', {}], {});
 	app.start();
 	alert('Bienvenu Jonathan');
 
