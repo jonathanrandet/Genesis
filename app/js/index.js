@@ -80,7 +80,7 @@ $(function(){
 	app.getPage('accueil').setTitle('Bienvenue');
 	app.getData(['ggffg', {}], {});
 	app.start();
-	alert('Bienvenu Jonathan');
+	//alert('Bienvenu Jonathan');
 
 
 });
