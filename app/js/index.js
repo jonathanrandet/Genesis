@@ -1,6 +1,10 @@
 $(function(){
 	//window.$ = jQuery; 	// Enlever cette ligne de la !!!
 	$('#test').tooltip({placement: 'bottom'});
+	$(document).on('myEvent', function(e, args){
+		console.log(args);
+	});
+	$(document).trigger('myEvent', 'Je suis un chef');
 /*	var ModuleModel = require('../../lib/models/ModuleModel');
 	var data = require('../../modules/Auteur/config');
 	moduleAuteur = new ModuleModel(data);
