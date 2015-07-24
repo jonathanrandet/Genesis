@@ -1,6 +1,7 @@
 $(function(){
 	//window.$ = jQuery; 	// Enlever cette ligne de la !!!
 	$('#test').tooltip({placement: 'bottom'});
+	//$(document).once('myEvent', function(e, args){
 	$(document).on('myEvent', function(e, args){
 		console.log(args);
 	});
