@@ -6,25 +6,9 @@ $(function(){
 		console.log(args);
 	});
 	$(document).trigger('myEvent', 'Je suis un chef');
-/*	var ModuleModel = require('../../lib/models/ModuleModel');
-	var data = require('../../modules/Auteur/config');
-	moduleAuteur = new ModuleModel(data);
 
-	var AddView = require('../../lib/views/AddView');
-	var maVue = new AddView({
-		model: moduleAuteur,
-		template: require('../../modules/Auteur/tpl/AddTemplate.hbs')
-	});
-	maVue.render();
 
-	var ListView = require('../../lib/views/ListView');
-	var maNewVue = new ListView({
-		model: moduleAuteur,
-		template: require('../../modules/Auteur/tpl/ListTemplate.hbs')
-	});
-	maNewVue.render();
-
-	var PageView = require('../../lib/views/PageView');
+/*	var PageView = require('../../lib/views/PageView');
 	var datast = {};
 	datast.name = 'accueil';
 	var testamos = new PageView(datast);*/
@@ -85,7 +69,27 @@ $(function(){
 	app.getPage('accueil').setTitle('Bienvenue');
 	app.getData(['ggffg', {}], {});
 	app.start();
-	//alert('Bienvenu Jonathan');
+
+/*	var ModuleModel = require('../../lib/models/ModuleModel');
+	var data = require('../../modules/Auteur/config');
+	moduleAuteur = new ModuleModel({},data);
+
+	var AddView = require('../../lib/views/AddView');
+	var maVue = new AddView({
+		model: moduleAuteur,
+		template: require('../../modules/Auteur/tpl/AddTemplate.hbs')
+	});
+	maVue.render();
+
+	var ListView = require('../../lib/views/ListView');
+	var maNewVue = new ListView({
+		model: moduleAuteur,
+		template: require('../../modules/Auteur/tpl/ListTemplate.hbs')
+	});
+	maNewVue.render();*/
+
+
+	alert('Bienvenu Jonathan !!');
 
 
 });
