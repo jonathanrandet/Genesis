@@ -87,9 +87,14 @@ $(function(){
 		template: require('../../modules/Auteur/tpl/ListTemplate.hbs')
 	});
 	maNewVue.render();*/
+	app.addAction('addModel', function(e){
+		console.log('Joe Calagan !!');
+		alert('God is great');
+	});
+	app.Modules.Auteur.views.addView.render();
+	
 
-
-	alert('Bienvenu Jonathan !!');
+	//alert('Bienvenu Jonathan !!');
 
 
 });
