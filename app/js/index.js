@@ -92,6 +92,7 @@ $(function(){
 		alert('God is great');
 	});
 	app.Modules.Auteur.views.addView.render();
+	app.Modules.Auteur.views.listView.render();
 	
 
 	//alert('Bienvenu Jonathan !!');
