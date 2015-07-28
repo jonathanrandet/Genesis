@@ -91,8 +91,9 @@ $(function(){
 		console.log('Joe Calagan !!');
 		alert('God is great');
 	});
-	app.Modules.Auteur.views.addView.render();
-	app.Modules.Auteur.views.listView.render();
+	app.Modules.auteur.views.addView.render();
+	app.Modules.auteur.views.listView.render();
+	app.Modules.auteur.views.editView.render();
 	
 
 	//alert('Bienvenu Jonathan !!');
