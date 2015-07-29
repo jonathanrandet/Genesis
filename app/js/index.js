@@ -93,7 +93,7 @@ $(function(){
 	});
 	app.Modules.auteur.views.addView.render();
 	app.Modules.auteur.views.listView.render();
-	app.Modules.auteur.views.editView.render();
+	//app.Modules.auteur.views.editView.render();
 	
 
 	//alert('Bienvenu Jonathan !!');
