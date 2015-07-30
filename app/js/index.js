@@ -93,6 +93,7 @@ $(function(){
 	});
 	app.Modules.auteur.views.addView.render();
 	app.Modules.auteur.views.listView.render();
+	app.Modules.auteur.views.searchView.render();
 	//app.Modules.auteur.views.editView.render();
 	
 
@@ -114,8 +115,8 @@ $(function(){
 	    return (c ? num.replace('.', c) : num).replace(new RegExp(re, 'g'), '$&' + (s || ','));
 	};
 	
-	12345678.9.format(2, 3, '.', ',');  // "12.345.678,90"
-	123456.789.format(4, 4, ' ', ':');  // "12 3456:7890"
-	12345678.9.format(0, 3, '-');       // "12-345-679"
+	console.log((12345678.9).format(2, 3, '.', ','));  // "12.345.678,90"
+	(123456.789).format(4, 4, ' ', ':');  // "12 3456:7890"
+	(12345678.9).format(0, 3, '-');       // "12-345-679"
 
 });
