@@ -39,8 +39,13 @@ $(function(){
 	//var testi = new collection(ModuleModel);
 	//console.log(testi.toJSON());
 
-	var Genesis = require('../../lib/views/AppView');
-	var app = new Genesis();
+/*	var Genesis = require('../../lib/views/AppView');
+	var app = new Genesis();*/
+
+	var app = require('../../lib/views/AppView');
+
+	var tito = require('../../lib/views/AppView');
+
 
 
 	app.initPage('test', actionTest);
@@ -51,7 +56,6 @@ $(function(){
 		page.setModel('sansnom');
 		alert('Bienvenu sur mon site !');
 	}
-
 	//console.log(app);
 /*	var PageModel = require('../../lib/views/ModelView');
 	var PageView  = require('../../lib/views/PageView');
@@ -112,6 +116,8 @@ $(function(){
 		console.log('Joe Calagan !!');
 		alert('God is great');
 	});
+
+	tito.addModel();
 	app.Modules.auteur.views.addView.render();
 	app.Modules.auteur.views.listView.render();
 	app.Modules.auteur.views.searchView.render();
