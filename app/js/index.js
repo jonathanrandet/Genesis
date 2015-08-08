@@ -116,7 +116,7 @@ $(function(){
 		console.log('Joe Calagan !!');
 		alert('God is great');
 	});
-
+	// Test singleton
 	tito.addModel();
 	app.Modules.auteur.views.addView.render();
 	app.Modules.auteur.views.listView.render();
