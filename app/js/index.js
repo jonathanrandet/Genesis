@@ -118,6 +118,8 @@ $(function(){
 	});
 	// Test singleton
 	tito.addModel();
+	console.log(tito.kinda);
+
 	app.Modules.auteur.views.addView.render();
 	app.Modules.auteur.views.listView.render();
 	app.Modules.auteur.views.searchView.render();

@@ -32,11 +32,18 @@
     "handlebars": "~3.0.0",
     "hbsfy": "~2.2.1",
     "mocha": "~2.2.0",
-    "grunt-jsduck": "~1.0.1"
+    "grunt-jsduck": "~1.0.1",
+    "grunt-named-modules": "~1.0.3"
   },
   "browser": {
     "jquery": "./vendor/js/jquery.js",
     "validate": "./vendor/js/validate.js"
   },
-  "browserify-shim": "./vendor/js/shims.js"
+  "browserify-shim": "./vendor/js/shims.js",
+  "scripts": {
+    "postinstall": "grunt namedModules"
+  },
+  "namedModules": {
+    "Controller": "./lib/controllers/Controller.js"
+  }
 }

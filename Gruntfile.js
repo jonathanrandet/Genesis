@@ -231,8 +231,8 @@ module.exports = function(grunt){
 
 		// Load all plugins 
 		require('load-grunt-tasks')(grunt);
-		grunt.registerTask('default',['jshint','browserify:lib','cssmin']);
-		grunt.registerTask('prod',['jshint', 'browserify:lib', 'uglify', 'cssmin']);
+		grunt.registerTask('default',['jshint','namedModules','browserify:lib','cssmin']);
+		grunt.registerTask('prod',['jshint','namedModules', 'browserify:lib', 'uglify', 'cssmin']);
 	}
 
 };
