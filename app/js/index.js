@@ -92,6 +92,7 @@ $(function(){
 	//app.Pages.test.removeModel();
 	//app.Pages.accueil.removeModel();
 	app.getPage('accueil').setTitle('Bienvenue');
+
 	app.getData(['ggffg', {}], {});
 	app.start();
 
@@ -117,13 +118,11 @@ $(function(){
 		alert('God is great');
 	});
 	// Test singleton
-	tito.addModel();
-	console.log(tito.kinda);
+	//tito.addModel();
 
 	app.Modules.auteur.views.addView.render();
 	app.Modules.auteur.views.listView.render();
 	app.Modules.auteur.views.searchView.render();
-	//app.Modules.auteur.views.editView.render();
 	
 
 	//alert('Bienvenu Jonathan !!');
