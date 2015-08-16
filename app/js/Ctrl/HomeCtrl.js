@@ -1,16 +1,20 @@
+var testCtrl = require('Controller')('test');
 
-	var HomeCtrl = require('Controller')('HomeCtrl');
+testCtrl.initPage(actionTest);
+testCtrl.addAction('action',  comportment);
 
-/*	HomeCtrl.initPage('sdffsf',  szasasa);
-	HomeCtrl.addAction('sdffsf',  szasasa);
-	HomeCtrl.addAction('sdffsf',  szasasa);
-	HomeCtrl.addAction('sdffsf',  szasasa);
-	HomeCtrl.addAction('sdffsf',  szasasa);
-	HomeCtrl.addAction('sdffsf',  szasasa);
-	HomeCtrl.addAction('sdffsf',  szasasa);
+function actionTest(page, app){
+	console.log(app.params);
+	console.log(page.name);
+	page.setModel('sansnom');
+	alert('Bienvenu sur mon site !');
+}
 
-	function szasasa (app, page){
-		// Ici quelque chose
-	}*/
+function comportment (e, page, app){
+	// Ici quelque chose
+	console.log('Je suis un champion');
+	console.log(app.params);
+	console.log(page.name);
+}
 
-	console.log('Mon controller', HomeCtrl);
+console.log('Mon controller', testCtrl);

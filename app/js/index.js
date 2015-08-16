@@ -46,16 +46,6 @@ $(function(){
 
 	var tito = require('../../lib/views/AppView');
 
-
-
-	app.initPage('test', actionTest);
-
-	function actionTest(app, page){
-		console.log(app.params);
-		console.log(page.name);
-		page.setModel('sansnom');
-		alert('Bienvenu sur mon site !');
-	}
 	//console.log(app);
 /*	var PageModel = require('../../lib/views/ModelView');
 	var PageView  = require('../../lib/views/PageView');
@@ -123,7 +113,6 @@ $(function(){
 	app.Modules.auteur.views.addView.render();
 	app.Modules.auteur.views.listView.render();
 	app.Modules.auteur.views.searchView.render();
-	
 
 	//alert('Bienvenu Jonathan !!');
 
