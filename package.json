@@ -44,6 +44,6 @@
     "postinstall": "grunt namedModules"
   },
   "namedModules": {
-    "Controller": "./lib/controllers/Controller.js"
+    "Controller": "./lib/controllers/index.js"
   }
 }
