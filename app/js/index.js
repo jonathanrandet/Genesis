@@ -109,6 +109,7 @@ $(function(){
 	});
 	// Test singleton
 	//tito.addModel();
+	var taa = require('../../lib/models/Request');
 
 	app.Modules.auteur.views.addView.render();
 	app.Modules.auteur.views.listView.render();
