@@ -120,9 +120,9 @@ $(function(){
 
 	console.log(qsel_Article);
 
-	app.Modules.auteur.views.addView.render();
+/*	app.Modules.auteur.views.addView.render();
 	app.Modules.auteur.views.listView.render();
-	app.Modules.auteur.views.searchView.render();
+	app.Modules.auteur.views.searchView.render();*/
 
 	//alert('Bienvenu Jonathan !!');
 
