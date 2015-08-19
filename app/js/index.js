@@ -111,6 +111,15 @@ $(function(){
 	//tito.addModel();
 	var taa = require('../../lib/models/Request');
 
+	var qsel_Article = new taa({},{
+		url: 'localhost',
+		method: 'Post',
+		limit: 100,
+		offset: 0
+	});
+
+	console.log(qsel_Article);
+
 	app.Modules.auteur.views.addView.render();
 	app.Modules.auteur.views.listView.render();
 	app.Modules.auteur.views.searchView.render();
