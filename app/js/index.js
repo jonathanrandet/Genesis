@@ -104,8 +104,11 @@ $(function(){
 	});
 	maNewVue.render();*/
 	app.addAction('addModel', function(e){
-		console.log('Joe Calagan !!');
-		alert('God is great');
+		var isValid = $('form[name="Auteur"]').valid();
+		if(isValid){
+			console.log('Joe Calagan !!');
+			alert('God is great');
+		}
 	});
 	// Test singleton
 	//tito.addModel();
