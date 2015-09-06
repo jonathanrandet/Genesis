@@ -103,9 +103,9 @@ $(function(){
 		template: require('../../modules/Auteur/tpl/ListTemplate.hbs')
 	});
 	maNewVue.render();*/
-	app.addAction('addModel', function(e){
-		var isValid = $('form[name="Auteur"]').valid();
+	app.addAction('addModel', function(e, isValid, model){
 		if(isValid){
+			console.log(model);
 			console.log('Joe Calagan !!');
 			alert('God is great');
 		}
