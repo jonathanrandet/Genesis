@@ -121,7 +121,7 @@ $(function(){
 		offset: 0
 	});
 
-	console.log(qsel_Article);
+	console.log('Request',qsel_Article);
 
 /*	app.Modules.auteur.views.addView.render();
 	app.Modules.auteur.views.listView.render();
