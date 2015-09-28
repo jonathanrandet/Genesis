@@ -110,8 +110,10 @@ $(function(){
 			alert('God is great');
 		}
 	});
+
 	// Test singleton
-	//tito.addModel();
+	// tito.addModel();
+	
 	var taa = require('../../lib/models/Request');
 
 	var qsel_Article = new taa({},{
@@ -120,6 +122,22 @@ $(function(){
 		limit: 100,
 		offset: 0
 	});
+
+	var toto = [
+		{nom: 'randet', age: 24, prenom: 'jonathan'},
+		{nom: 'randet', age: 23, prenom: 'joelle'},
+		{nom: 'randet', age: 19, prenom: 'nicolas'},
+		{nom: 'jackson', age: 27}
+	];
+
+	qsel_Article.datas.set(toto);
+	var tata = qsel_Article.datas.search({nom: 'randet', prenom: 'jonathan'});
+
+	var tuts = tata.first();
+	while (!tata.end){
+		console.log(tuts.attributes);
+		tuts = tata.next();
+	}
 
 	console.log('Request',qsel_Article);
 
