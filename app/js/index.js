@@ -141,6 +141,26 @@ $(function(){
 
 	console.log('Request',qsel_Article);
 
+
+	var RemoteDb = require('../../lib/models/RemoteDb');
+
+	var qsel_Articles = new RemoteDb();
+	qsel_Articles.params.type = 'GET';
+	qsel_Articles.params.url = 'http://localhost/myapiprojects/tes/';
+	//qsel_Article.params.data = {nom: 'jonathan', id: 'titi'};
+	qsel_Articles.onSuccess(function(x, y, z){
+		//console.log(y);
+		x = JSON.parse(x);
+		console.log(x, y, z);
+	});
+
+	qsel_Articles.onError(function(x, y, z){
+		//console.log(y);
+		//x = JSON.parse(x);
+		console.log(x, y, z);
+	});
+	qsel_Articles.run();
+
 /*	app.Modules.auteur.views.addView.render();
 	app.Modules.auteur.views.listView.render();
 	app.Modules.auteur.views.searchView.render();*/
