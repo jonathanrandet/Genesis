@@ -146,7 +146,7 @@ $(function(){
 
 	var qsel_Articles = new RemoteDb();
 	qsel_Articles.params.type = 'GET';
-	qsel_Articles.params.url = 'http://localhost/myapiprojects/tes/';
+	qsel_Articles.params.url = 'http://localhost/myapiprojects/test/';
 	//qsel_Article.params.data = {nom: 'jonathan', id: 'titi'};
 	qsel_Articles.onSuccess(function(x, y, z){
 		//console.log(y);
