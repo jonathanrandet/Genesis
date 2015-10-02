@@ -148,16 +148,16 @@ $(function(){
 	qsel_Articles.params.type = 'GET';
 	qsel_Articles.params.url = 'http://localhost/myapiprojects/test/';
 	//qsel_Article.params.data = {nom: 'jonathan', id: 'titi'};
-	qsel_Articles.onSuccess(function(x, y, z){
-		//console.log(y);
-		x = JSON.parse(x);
-		console.log(x, y, z);
-	});
-
-	qsel_Articles.onError(function(x, y, z){
+	qsel_Articles.onSuccess(function(responseText, state, xhr){
 		//console.log(y);
 		//x = JSON.parse(x);
-		console.log(x, y, z);
+		console.log(responseText, state, xhr);
+	});
+
+	qsel_Articles.onError(function(xhr, state, statusText){
+		//console.log(y);
+		//x = JSON.parse(x);
+		console.log(xhr, state, statusText);
 	});
 	qsel_Articles.run();
 
