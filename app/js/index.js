@@ -19,6 +19,25 @@ $(function(){
 	(123456.789).format(4, 4, ' ', ':');  // "12 3456:7890"
 	console.log((12345678.9).format(0, 3, '-'));       // "12-345-679"
 
+
+	function addslashes(str) {
+		//  discuss at: http://phpjs.org/functions/addslashes/
+		// original by: Kevin van Zonneveld (http://kevin.vanzonneveld.net)
+		// improved by: Ates Goral (http://magnetiq.com)
+		// improved by: marrtins
+		// improved by: Nate
+		// improved by: Onno Marsman
+		// improved by: Brett Zamir (http://brett-zamir.me)
+		// improved by: Oskar Larsson Högfeldt (http://oskar-lh.name/)
+		//    input by: Denny Wardhana
+		//   example 1: addslashes("kevin's birthday");
+		//   returns 1: "kevin\\'s birthday"
+
+		return (str + '')
+		.replace(/[\\"']/g, '\\$&')
+		.replace(/\u0000/g, '\\0');
+	}
+
 	
 	//window.$ = jQuery; 	// Enlever cette ligne de la !!!
 	$('#test').tooltip({placement: 'bottom'});
@@ -42,6 +61,12 @@ $(function(){
 /*	var Genesis = require('../../lib/views/AppView');
 	var app = new Genesis();*/
 
+	var rh = require('Class')('autEuR');
+	console.log(rh);
+
+	var tm = new rh();
+	console.log('config', tm.config);
+	
 	var app = require('../../lib/views/AppView');
 
 	var tito = require('../../lib/views/AppView');
@@ -103,7 +128,7 @@ $(function(){
 		template: require('../../modules/Auteur/tpl/ListTemplate.hbs')
 	});
 	maNewVue.render();*/
-	app.addAction('addModel', function(e, isValid, model){
+	app.addAction('addModel', function(e, model, isValid){
 		if(isValid){
 			console.log(model);
 			console.log('Joe Calagan !!');

@@ -36,7 +36,7 @@ module.exports = function(grunt){
 		var isOk = false;
 		
 		if(fs.isFile(rootdir+'/'+subdir+'/config.js')){
-			content += subdir+': {\n';
+			content += subdir.toLowerCase()+': {\n';
 			content	+= '\tconfig: require(\'../modules/'+subdir+'/config\'),\n';
 			isOk = true;
 		}
