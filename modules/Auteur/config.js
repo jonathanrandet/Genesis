@@ -2,6 +2,7 @@
 var config = {
 		className: 'Auteur',
 		urlRoot: '',
+		tableName: 'tbl_auteur',
 		fields: [ // Bouton de validation ajouté automatiquement et grisé tant que les champs requis sont pas remplis. 
 			{
 				type: 'text', // Number, checkbox, radio, date, list,
@@ -12,6 +13,8 @@ var config = {
 				displayName : 'DisplayName_001', // Utilisé comme étiquette pour le détail et l'affichage en liste.
 				label: 'Nom', // Le label du champs 
 				name:'nom',
+				index: 'primary', // peut etre primary, unique 
+				defaultValue: '',
 				attributes: {
 					id: 'jonathan-id', // L'id a utiliser pour css ou jquery ...
 					title: 'Mon Titre',

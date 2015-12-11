@@ -45,6 +45,7 @@
   },
   "namedModules": {
     "Controller": "./lib/controllers/index.js",
-    "Class": "./lib/classes/index.js"
+    "Class": "./lib/classes/index.js",
+    "Genesis": "./lib/genesis/index.js"
   }
 }

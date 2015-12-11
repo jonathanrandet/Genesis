@@ -65,11 +65,12 @@ $(function(){
 	console.log(rh);
 
 	var tm = new rh();
-	console.log('config', tm.config);
+	console.log('config', tm.idField);
+	console.log('config', tm.tableName);
 	
-	var app = require('../../lib/views/AppView');
+	var app = require('Genesis');
 
-	var tito = require('../../lib/views/AppView');
+	var tito = require('Genesis');
 
 	//console.log(app);
 /*	var PageModel = require('../../lib/views/ModelView');
