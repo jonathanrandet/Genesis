@@ -168,6 +168,12 @@ $(function(){
 	console.log('Request',qsel_Article);
 
 
+	var Lolo = require('../../lib/models/LocalDb');
+	var tyu = new Lolo();
+
+	console.log(tyu);
+
+
 	var RemoteDb = require('../../lib/models/RemoteDb');
 
 	var qsel_Articles = new RemoteDb();

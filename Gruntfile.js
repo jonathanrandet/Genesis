@@ -204,7 +204,7 @@ module.exports = function(grunt){
 			browserify: {
 		      	lib: {
 			        files: {
-			          './prod/app.js': ['./vendor/js/validate.js','./vendor/js/*.js', './lib/js/*.js','./app/**/*.js']
+			          './prod/app.js': ['./vendor/js/validate.js','./vendor/js/*.js','./lib/js/*.js','./app/**/*.js']
 			        },
 			        options: {
 			          transform: ['hbsfy', 'browserify-shim']
@@ -222,7 +222,7 @@ module.exports = function(grunt){
 			cssmin: {
 				dist: {
 				    files: {
-				      'prod/min.css': ['app/css/*.css', 'modules/**/*.css','vendor/css/*.css']
+				    	'prod/min.css': ['vendor/css/*.css','app/css/*.css','modules/**/*.css']
 					}
 				}
 			},

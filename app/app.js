@@ -4,6 +4,7 @@ var app = {
 	defaultModel: 'tata',
 	name: 'Genesis Project',
 	remoteDb: 'http://localhost/myapiprojects/test/',
-	localDbName: 'BaseGenesis'
+	localDbName: 'BaseGenesis',
+	localDbSize: 51500000 // Max size for IOS
 };
 module.exports = app;
